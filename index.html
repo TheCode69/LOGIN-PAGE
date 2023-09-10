@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('green.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Algerian;
+            background-color: cadetblue;
+        }
+
+        .box {
+            width: 300px;
+            margin: 0 auto;
+            background-color: rgb(99, 94, 94);
+            padding: 20px;
+            margin-top: 100px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form autocomplete="off" method="post" action="#">
+            <h2>Login</h2>
+            <label for="USERNAME">Username</label>
+            <input type="text" id="USERNAME" name="USERNAME" placeholder="Enter your username" required>
+
+            <label for="PASSWORD">Password</label>
+            <input type="password" id="PASSWORD" name="PASSWORD" placeholder="Enter your password" required>
+
+            <input type="submit" name="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
