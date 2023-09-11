@@ -11,18 +11,23 @@
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            font-family: Algerian;
+            font-family: Algerian;  
             background-color: cadetblue;
         }
 
         .box {
             width: 300px;
-            margin: 0 auto;
+            margin: 20px;
             background-color: rgb(99, 94, 94);
             padding: 20px;
-            margin-top: 100px;
+            margin-top: 50px; 
+            margin-left: 100px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(90, 64, 64, 0.3);
+            display: inline-block;
+            margin-bottom: 100px;
+            
         }
 
         label {
@@ -32,7 +37,7 @@
 
         input[type="text"],
         input[type="password"] {
-            width: 100%;
+            width: 93%;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
@@ -48,24 +53,88 @@
             cursor: pointer;
             width: 100%;
         }
-
+ 
         input[type="submit"]:hover {
             background-color: #45a049;
+        }
+        #header {
+            text-align: center;
+            color: rgb(219, 223, 10);
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        #footer {
+            text-align: center;
+            background-color: #333; /* Background color, adjust as needed */
+            color: white; /* Text color, adjust as needed */
+            padding: 50px; /* Add padding to provide space around the content */
         }
     </style>
 </head>
 <body>
+   <div id="header">
+        <h1>JAVASCRIPT DIALOGUE BOXES </h1>
+    </div> 
     <div class="box">
-        <form autocomplete="off" method="post" action="#">
-            <h2>Login</h2>
+        <form autocomplete="off" method="post" action="index.html">
+            <h2>Login & alert()</h2>
             <label for="USERNAME">Username</label>
             <input type="text" id="USERNAME" name="USERNAME" placeholder="Enter your username" required>
 
             <label for="PASSWORD">Password</label>
             <input type="password" id="PASSWORD" name="PASSWORD" placeholder="Enter your password" required>
 
-            <input type="submit" name="submit" value="Login">
+            <input type="submit" name="submit" value="Login" onclick="message()">
         </form>
+        <script>
+            function message(){
+                alert("SUCCES")
+            }
+        </script>
+    </div>
+    <div class="box">
+        <form autocomplete="off" method="post" action="index.html">
+            <h2>Login & Confirm()</h2>
+            <label for="USERNAME">Username</label>
+            <input type="text" id="USERNAME" name="USERNAME" placeholder="Enter your username" required>
+
+            <label for="PASSWORD">Password</label>
+            <input type="password" id="PASSWORD" name="PASSWORD" placeholder="Enter your password" required>
+
+            <input type="submit" name="submit" value="Login" onclick="code()">
+        </form>
+        <script>
+            function code(){
+               const login = confirm("ARE YOU SURE?")
+               if (loginConfirmed) {
+                
+            }
+        }
+                
+            
+        </script>
+    </div>
+    <div class="box">
+        <form autocomplete="off" method="post" action="index.html">
+            <h2>Login & prompt()</h2>
+            <label for="USERNAME">Username</label>
+            <input type="text" id="USERNAME" name="USERNAME" placeholder="Enter your username" required>
+
+            <label for="PASSWORD">Password</label>
+            <input type="password" id="PASSWORD" name="PASSWORD" placeholder="Enter your password" required>
+
+            <input type="submit" name="submit" value="Login" onclick="danny()">
+        </form>
+        <script>
+            function danny(){
+                const userInput = prompt("Enter YOur Username:");
+                if(userInput !== null){
+                    alert("Hello, " + userInput + "!");
+                }else {""}
+            }
+        </script>
+    </div>
+    <div id="footer">
+        Copyright @CODE 2023
     </div>
 </body>
 </html>
