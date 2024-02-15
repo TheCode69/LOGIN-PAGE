@@ -1,1 +1,1 @@
-A simple Login  page using html and css
+A simple Login  page using HTML and css
